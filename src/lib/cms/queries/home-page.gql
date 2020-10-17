@@ -1,0 +1,6 @@
+# TODO delete this test query
+query HomePage {
+  hero
+  subtitle
+  image
+}
