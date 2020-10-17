@@ -1,4 +1,4 @@
-# next-typescript
+# next-cms-graphql
 
 Setup for using next with a graphql cms and have code generation for the schema and the queries and stuff... with great typescript support.
 
