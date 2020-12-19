@@ -2,6 +2,20 @@
 
 Setup for using next with a graphql cms and have code generation for the schema and the queries and stuff... with great typescript support.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fbasementstudio%2Fnext-cms-graphql&env=CMS_GRAPHQL_ENDPONT,CMS_ACCESS_TOKEN,CMS_PREVIEW_ACCESS_TOKEN,CMS_PREVIEW_SECRET)
+
+## Important
+
+This setup was tested with Contentful, so, with other CMS services it might not work. In Prismic, for example, due to their GraphQL API not supporting POST requests (super non-standard), this setup doesn't work.
+
+Tested on:
+
+- Contentful
+
+Doesn't work on:
+
+- Prismic
+
 ## Featured aspects of the stack
 
 - Typescript
@@ -12,14 +26,18 @@ Setup for using next with a graphql cms and have code generation for the schema 
 ## To get started
 
 - `yarn`
-- Copy the contents of .env.example into .env (not .env.local, cause dotenv, which graphql-codegen needs, works with .env and i didn't kmow how to configure for .env.local)
+- Copy the contents of .env.example into `.env` (not `.env.local`, cause dotenv, which graphql-codegen needs, works with `.env` and I didn't kmow how to configure for `.env.local`)
 - Run `yarn gql-codegen` to generate the schema
-- Every time you change the schema of the cms, you should run the code-gen. It also will run automatically on every commit.
+- Every time you change the schema of the cms, you should run the code-gen.
 
 ## Things to note
 
 - It comes with Inter (it's better to host fonts here rather than getting them from google fonts). Remove it if you are not going to use it.
 - Pages, components, etc... are located under `/src`. If you are changing this, be sure to also update `tsconfig.json`'s `baseUrl`.
+
+---
+
+If you find you need to make extra config to make this work better (such as some eslint rule, or some prettier change), feel free to submit a pr suggesting your changes. Our focus is for you to get up and running with the least steps and burden as possible.
 
 ---
 

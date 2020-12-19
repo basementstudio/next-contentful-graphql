@@ -1,6 +1,8 @@
 # TODO delete this test query
-query HomePage {
-  hero
-  subtitle
-  image
+
+query HomePage($preview: Boolean) {
+  homeCollection(limit: 1, preview: $preview) {
+    title
+    subtitle
+  }
 }

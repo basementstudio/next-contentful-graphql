@@ -1,18 +1,28 @@
 import Hello from 'components/hello'
-import gqlSdk from 'lib/cms'
-import { InferGetStaticPropsType } from 'next'
+import PreviewButtons from 'components/preview-buttons'
+import cms from 'lib/cms'
+import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
-const HomePage = ({ page }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const HomePage = ({
+  page,
+  preview
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   console.log(page)
-  return <Hello who="Typescript" />
+  return (
+    <>
+      <Hello who="Typescript" />
+      {preview && <PreviewButtons />}
+    </>
+  )
 }
 
-const getStaticProps = async () => {
-  const home = await gqlSdk.HomePage()
+const getStaticProps = async ({ preview }: GetStaticPropsContext) => {
+  const home = await cms(preview).HomePage()
 
   return {
     props: {
-      page: home ?? null
+      page: home ?? null,
+      preview: !!preview
     },
     revalidate: 1
   }

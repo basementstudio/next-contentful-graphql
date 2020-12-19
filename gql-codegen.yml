@@ -1,16 +1,16 @@
 overwrite: true
 schema:
-  - https://graphql.contentful.com/content/v1/spaces/po4qc9xpmpuh:
+  - ${CMS_GRAPHQL_ENDPONT}:
       headers:
         Authorization: Bearer ${CMS_ACCESS_TOKEN}
 documents: './src/**/*.{gql,graphql}'
 generates:
-  ./src/lib/contentful/generated.ts:
+  ./src/lib/cms/generated.ts:
     plugins:
       - 'typescript'
       - 'typescript-operations'
       - 'typescript-graphql-request'
-  ./src/lib/contentful/graphql.schema.json:
+  ./src/lib/cms/graphql.schema.json:
     plugins:
       - 'introspection'
 hooks:
