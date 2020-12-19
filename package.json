@@ -1,8 +1,8 @@
 {
-  "name": "next-cms-graphql",
+  "name": "next-contentful-graphql",
   "version": "0.1.0",
-  "description": "A boilerplate for using NextJS with a CMS that supports GraphQL.",
-  "repository": "https://github.com/basementstudio/next-cms-graphql",
+  "description": "A boilerplate for using NextJS with Contentful's GraphQL API.",
+  "repository": "https://github.com/basementstudio/next-contentful-graphql",
   "author": "Basement",
   "private": true,
   "scripts": {
