@@ -12,7 +12,7 @@ Setup for using next with Contentful's Graphql API and have code generation for 
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fbasementstudio%2Fnext-contentful-graphql&env=CMS_GRAPHQL_ENDPONT,CMS_ACCESS_TOKEN,CMS_PREVIEW_ACCESS_TOKEN,CMS_PREVIEW_SECRET)
 
-## Important
+## Usage with other CMSs
 
 This setup was tested with Contentful, so, with other CMS services it might not work. In Prismic, for example, due to their GraphQL API not supporting POST requests (super non-standard), this setup doesn't work.
 
