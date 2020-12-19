@@ -1,6 +1,4 @@
 import { GraphQLClient } from 'graphql-request'
-
-// TODO this will get fixed once you run `yarn gql-codegen` for the first time
 import { getSdk } from './generated'
 
 const endpoint = process.env.CMS_GRAPHQL_ENDPONT

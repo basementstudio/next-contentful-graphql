@@ -1,8 +1,0 @@
-# TODO delete this test query
-
-query HomePage($preview: Boolean) {
-  homeCollection(limit: 1, preview: $preview) {
-    title
-    subtitle
-  }
-}

@@ -4,10 +4,10 @@ import cms from 'lib/cms'
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
 const HomePage = ({
-  page,
+  assets,
   preview
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  console.log(page)
+  console.log(assets)
   return (
     <>
       <Hello who="Typescript" />
@@ -17,11 +17,11 @@ const HomePage = ({
 }
 
 const getStaticProps = async ({ preview }: GetStaticPropsContext) => {
-  const home = await cms(preview).HomePage()
+  const assets = await cms(preview).Test({ preview: !!preview })
 
   return {
     props: {
-      page: home ?? null,
+      assets: assets ?? null,
       preview: !!preview
     },
     revalidate: 1

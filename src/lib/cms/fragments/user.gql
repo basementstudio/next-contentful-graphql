@@ -1,6 +1,0 @@
-# TODO delete this test fragment
-fragment User on User {
-  name
-  position
-  avatar
-}

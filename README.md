@@ -2,6 +2,14 @@
 
 Setup for using next with Contentful's Graphql API and have code generation for the schema and the queries and stuff... with great typescript support.
 
+## Before deploying
+
+- Create a contentful space
+- To fill up the env vars, you'll need
+  - Access tokens: `https://app.contentful.com/{YOUR_SPACE}/84rr8cohdvyr/api/keys`
+  - GraphQL endpoint: `https://graphql.contentful.com/content/v1/spaces/{YOUR_SPACE}/environments/master`
+- That's it, click the button below and get started
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fbasementstudio%2Fnext-contentful-graphql&env=CMS_GRAPHQL_ENDPONT,CMS_ACCESS_TOKEN,CMS_PREVIEW_ACCESS_TOKEN,CMS_PREVIEW_SECRET)
 
 ## Important

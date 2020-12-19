@@ -1,0 +1,7 @@
+query Test($preview: Boolean!) {
+  assetCollection(limit: 1, preview: $preview) {
+    items {
+      ...Asset
+    }
+  }
+}
