@@ -2,11 +2,10 @@ import { GraphQLClient } from 'graphql-request'
 import { getSdk } from './generated'
 
 const endpoint = process.env.CMS_GRAPHQL_ENDPOINT
-if (!endpoint) throw new Error(`Endpoint must be defined. Got ${endpoint}`)
 
 const cms = (preview?: boolean) =>
   getSdk(
-    new GraphQLClient(endpoint, {
+    new GraphQLClient(endpoint as string, {
       headers: {
         Authorization: `Bearer ${
           preview
