@@ -1,6 +1,6 @@
 overwrite: true
 schema:
-  - ${CMS_GRAPHQL_ENDPONT}:
+  - ${CMS_GRAPHQL_ENDPOINT}:
       headers:
         Authorization: Bearer ${CMS_ACCESS_TOKEN}
 documents: './src/**/*.{gql,graphql}'
