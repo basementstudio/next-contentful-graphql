@@ -10,9 +10,11 @@ Setup for using next with Contentful's Graphql API and have code generation for 
   - GraphQL endpoint: `https://graphql.contentful.com/content/v1/spaces/{YOUR_SPACE}/environments/master`
 - That's it, click the button below and get started
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fbasementstudio%2Fnext-contentful-graphql&env=CMS_GRAPHQL_ENDPONT,CMS_ACCESS_TOKEN,CMS_PREVIEW_ACCESS_TOKEN,CMS_PREVIEW_SECRET)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fbasementstudio%2Fnext-contentful-graphql&env=CMS_GRAPHQL_ENDPOINT,CMS_ACCESS_TOKEN,CMS_PREVIEW_ACCESS_TOKEN,CMS_PREVIEW_SECRET)
 
 ## Usage with other CMSs
+
+For DatoCMS, look at [next-dato-graphql](https://github.com/basementstudio/next-dato-graphql).
 
 This setup was tested with Contentful, so, with other CMS services it might not work. In Prismic, for example, due to their GraphQL API not supporting POST requests (super non-standard), this setup doesn't work.
 
